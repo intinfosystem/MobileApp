@@ -1,7 +1,9 @@
 package com.intsoft.swachchamaha.fragment;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Switch;
 
 import com.intsoft.swachchamaha.R;
+import com.intsoft.swachchamaha.util.Constants;
 
 import java.util.Locale;
 import java.util.logging.Logger;
@@ -51,16 +54,19 @@ public class LanguageChangeFragment extends Fragment {
                 boolean marathiSelected = languageSwitch.isChecked();
                 if(marathiSelected) {
                     Logger.getLogger(this.getClass().getName()).info("Switch Clicked Marathi Selected");
-                    String language = "mr";
-                    enableLanguageChange(language);
+                    enableLanguageChange(Constants.LANG_MARATHI);
                 } else {
                     Logger.getLogger(this.getClass().getName()).info("Switch Clicked English Selected");
-                    String language = "en";
-                    enableLanguageChange(language);
+                    enableLanguageChange(Constants.LANG_ENGLISH);
                 }
             }
         });
 
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.APP_SHARED_PREF, Context.MODE_PRIVATE);
+        String language = sharedPreferences.getString(Constants.PREF_LANG, Constants.DEFAULT_LANG);
+        if(Constants.LANG_MARATHI.equalsIgnoreCase(language)) {
+            languageSwitch.setChecked(true);
+        }
         return inaflatedView;
     }
 
@@ -75,6 +81,12 @@ public class LanguageChangeFragment extends Fragment {
         Intent intent = getActivity().getIntent();
         getActivity().finish();
         intent.putExtra("FROM_MENU", "LANGUAGE_CHANGE");
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.APP_SHARED_PREF, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Constants.PREF_LANG, language);
+        editor.commit();
+
         startActivity(intent);
     }
 }

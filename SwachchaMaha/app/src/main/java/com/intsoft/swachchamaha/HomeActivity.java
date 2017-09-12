@@ -3,7 +3,9 @@ package com.intsoft.swachchamaha;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -27,7 +29,9 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ShareActionProvider;
 import android.widget.Switch;
 
+import com.intsoft.swachchamaha.fragment.HomePageStaticImageFragment;
 import com.intsoft.swachchamaha.fragment.LanguageChangeFragment;
+import com.intsoft.swachchamaha.util.Constants;
 
 import java.util.Locale;
 import java.util.logging.Logger;
@@ -38,12 +42,14 @@ public class HomeActivity extends AppCompatActivity
     private Fragment galleryFragment = new GalleryFragment();
     private Fragment allPracticesFragment = new AllPracticesFragment();
     private Fragment homePageFragment = new HomePageFragment();
+    private Fragment homePageStaticImageFragment = new HomePageStaticImageFragment();
     // private ShareActionProvider shareActionProvider;
     private Fragment languageChangeFragment = new LanguageChangeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        selectLanguage();
         setContentView(R.layout.activity_home);
 
         // Default Landing Page
@@ -81,6 +87,17 @@ public class HomeActivity extends AppCompatActivity
 
     }
 
+    private void selectLanguage() {
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.APP_SHARED_PREF, Context.MODE_PRIVATE);
+        String language = sharedPreferences.getString(Constants.PREF_LANG, Constants.DEFAULT_LANG);
+        Locale currentLocale = new Locale(language, "IN");
+        Locale.setDefault(currentLocale);
+        Configuration configuration = new Configuration();
+        configuration.locale = currentLocale;
+        getBaseContext().getResources().updateConfiguration(configuration,
+                getBaseContext().getResources().getDisplayMetrics());
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -113,15 +130,19 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         } else if(id == R.id.action_share) {
-            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-            sharingIntent.setType("text/plain");
-            String shareBody = "Here is the share content body";
-            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
-            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-            startActivity(Intent.createChooser(sharingIntent, "Share via"));
+            shareit();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void shareit() {
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = getResources().getString(R.string.share_message_body);
+        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.share_subject));
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_via)));
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -142,11 +163,11 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Render home page here
             fragmentTransaction
-                    .replace(R.id.content, homePageFragment)
+                    .replace(R.id.content, homePageStaticImageFragment)
                     .commit();
-        } else if (id == R.id.nav_camera) {
+        } else /*if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_all_practices) {
+        } else*/ if (id == R.id.nav_all_practices) {
             // Show all practices here
             fragmentTransaction
                     .replace(R.id.content, allPracticesFragment)
@@ -155,16 +176,16 @@ public class HomeActivity extends AppCompatActivity
             fragmentTransaction
                     .replace(R.id.content, galleryFragment)
                     .commit();
-        } else if (id == R.id.nav_slideshow) {
+        } else /*if (id == R.id.nav_slideshow) {
             fragmentTransaction
                     .replace(R.id.content, galleryFragment)
                     .commit();
-        } else if (id == R.id.nav_language_change) {
+        } else */ if (id == R.id.nav_language_change) {
             fragmentTransaction
                     .replace(R.id.content, languageChangeFragment)
                     .commit();
         } else if (id == R.id.nav_share) {
-
+            shareit();
         } else if (id == R.id.nav_send) {
 
         }
