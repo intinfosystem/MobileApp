@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/pageBackground">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/home_page_image_slider"
@@ -24,7 +25,8 @@
 
     <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/pageBackground">
 
 
         <LinearLayout
@@ -38,9 +40,11 @@
                 android:id="@+id/textViewMissionName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/side_nav_bar"
+                android:padding="2dp"
+                android:background="@drawable/label_highlighter"
                 android:text="@string/mission_name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/white"/>
 
             <TextView
                 android:id="@+id/textViewMissionDetails"
@@ -55,9 +59,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/side_nav_bar"
+                android:padding="2dp"
+                android:background="@drawable/label_highlighter"
                 android:text="@string/text_mission"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/white"/>
 
             <TextView
                 android:id="@+id/textViewMissionStatements"
@@ -73,9 +79,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/side_nav_bar"
+                android:padding="2dp"
+                android:background="@drawable/label_highlighter"
                 android:text="@string/text_mission_strategy"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/textViewMissionStrategyStatements"

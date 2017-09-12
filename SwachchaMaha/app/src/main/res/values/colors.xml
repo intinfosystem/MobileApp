@@ -18,9 +18,19 @@
 
     <!-- Colour Set 2 - SBM Theme -->
 
-    <color name="colorPrimary">#3D9DD1</color>
-    <color name="colorPrimaryDark">#3D9DD1</color>
-    <color name="colorAccent">#000000</color>
-    <color name="splashBackground">#F9933B</color>
+    <color name="colorPrimary3">#3D9DD1</color>
+    <color name="colorPrimaryDark3">#3D9DD1</color>
+    <color name="colorAccent3">#000000</color>
+    <color name="splashBackground3">#F9933B</color>
 
+    <!-- Colour Set 3 - SMM Theme -->
+
+    <!-- <color name="colorPrimary">#00437D</color>  Blue -->
+    <color name="colorPrimary">#FC8716</color>
+    <color name="colorPrimaryDark">#56BC00</color>
+    <color name="colorAccent">#28A9E0</color>
+    <color name="splashBackground">#FC8716</color>
+
+
+    <color name="pageBackground">#FBF4DD</color>
 </resources>

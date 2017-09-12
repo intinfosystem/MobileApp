@@ -42,5 +42,8 @@
     <string name="nav_home">मुख्य पान</string>
     <string name="nav_gallary">दालन</string>
     <string name="nav_all_practices">सर्व उपक्रम</string>
+    <string name="nav_communicate">संपर्क व जोडणी</string>
+    <string name="nav_share">सामाजिक जोडणी</string>
+    <string name="nav_contact_us">आमचा संपर्क</string>
 
 </resources>
