@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">SwachchaMaha</string>
+    <string name="title_activity_home">स्वच्छ महाराष्ट्र</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="copyright_on_splash">© २०१७ - सर्व हक्क RCUES च्या स्वाधीन</string>
+    <string name="language">भाषा</string>
+    <string name="switch_to_marathi">मराठी</string>
+    <string name="switch_to_english">English</string>
+
+    <string name="text_title_bar">स्वच्छ महाराष्ट्र</string>
+
+    <string name="text_mission_details">देशातील सर्व शहरांमधील नागरिकांना स्वच्छ पर्यावरण व चांगले आरोग्य मिळावे या करिता या शहरांना स्वच्छतेची आणि या शहरामधील सर्व नागरीकांना शौचालयांची सुविधा उपलब्ध करून देवून हे ध्येय गाठण्यासाठी केंद्र शासनाने स्वच्छ भारत अभियान संपूर्ण देशामध्ये राबविण्याची घोषणा केली आहे.</string>
+    <string name="text_mission">अभियानाचा उद्देश :</string>
+    <string name="text_mission_statements">\n- उघडयावरील शौचविधी बंद करणे. \n
+        - हाताने मैला उचलणाऱ्या सफाई कामगारांना या कामातून मुक्त करणे. \n
+        - नागरी घनकचरा व्यवस्थापनासाठी आधुनिक व शास्त्रोक्त पध्दतीचा अवलंब करणे. \n
+        - स्वच्छतेच्या चांगल्या पद्धतीच्या अनुषंगाने सवयींमध्ये बदल करणे. \n
+        - स्वच्छते विषयी जागरूकता निर्माण करणे आणि त्याची सार्वजनिक आरोग्याशी सांगड घालणे. \n
+        - नागरी स्थानिक स्वराज्य संस्थांची क्षमता वाढविणे. \n
+        - भांडवली खर्च आणि ऑपरेशन आणि देखभाल यासाठी खाजगी संस्थांच्या सहभागासाठी सुयोग्य वातावरण निर्माण करणे. \n
+    </string>
+
+    <string name="text_mission_strategy">अभियानाचा धोरण :</string>
+    <string name="text_mission_strategy_statements">\n
+        - स्वच्छतेचा व्यापक आराखडा ज्यामध्ये-\n
+        - शहर स्तरावरील स्वच्छतेचा आराखडा.\n
+        - राज्याची स्वच्छतेची संकल्पना.\n
+        - राज्याचे स्वच्छतेचे धोरण.\n
+        - सवयींमध्ये बदलाचे धोरण आणि माहिती, शिक्षण व संपर्क.\n
+        - खाजगी संस्थांच्या सहभागासाठी सुयोग्य वातावरण निर्माण करणे.\n
+        - क्षमता बांधणी.\n
+    </string>
+    <!-- Drawer Header Items-->
+    <string name="mission_name">स्वच्छ महाराष्ट्र अभियान (नागरी)</string>
+
+    <!-- Menu Items-->
+    <string name="nav_home">मुख्य पान</string>
+    <string name="nav_gallary">दालन</string>
+    <string name="nav_all_practices">सर्व उपक्रम</string>
+
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorGradientGreen1">#00cc99</color>
+    <color name="colorGradientGreen2">#00EBB8</color>
+    <color name="colorGradientGreen3">#00EBB8</color>
+
+    <!-- Default Colour Set -->
+    <color name="colorPrimary1">#3F51B5</color>
+    <color name="colorPrimaryDark1">#303F9F</color>
+    <color name="colorAccent1">#FF4081</color>
+
+    <!-- Colour Set 1 - Green Theme -->
+    <color name="colorPrimary2">#00cc99</color>
+    <color name="colorPrimaryDark2">#00cc99</color>
+    <color name="colorAccent2">#000000</color>
+    <color name="splashBackground2">#A9FFDF</color>
+
+    <!-- Colour Set 2 - SBM Theme -->
+
+    <color name="colorPrimary">#3D9DD1</color>
+    <color name="colorPrimaryDark">#3D9DD1</color>
+    <color name="colorAccent">#000000</color>
+    <color name="splashBackground">#F9933B</color>
+
+</resources>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">SwachchaMaha</string>
+    <string name="title_activity_home">Clean Maharashtra</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="copyright_on_splash">© 2017 - All rights reserved by RCUES</string>
+    <string name="language">Language</string>
+    <string name="switch_to_marathi">मराठी</string>
+    <string name="switch_to_english">English</string>
+
+    <string name="text_title_bar">Clean Maharashtra</string>
+
+    <string name="text_mission_details">Swacch Bharat Abhiyan (SMA) was launched with a vision to ensure hygiene, waste management and sanitation across the nation.
+    </string>
+
+    <string name="text_mission">Mission</string>
+    <string name="text_mission_statements">\n
+    - Elimination of open defecation\n
+- Eradication of Manual Scavenging\n
+- Modern and Scientific Municipal Solid Waste Management\n
+- To effect behavioral change regarding healthy sanitation practices \n
+- Generate awareness about sanitation and its linkage with public health \n
+- Capacity Augmentation for ULB’s \n
+- To create an enabling environment for private sector participation in Capex (capital expenditure) and Opex (operation and maintenance) \n
+    </string>
+
+    <string name="text_mission_strategy">Mission Strategy</string>
+    <string name="text_mission_strategy_statements">\n
+        - Comprehensive Sanitation Planning, which includes\n
+        - City Level Sanitation Plans\n
+        - State Sanitation Concept\n
+        - Sate Sanitation Strategy\n
+        - Behavioural Change Strategy and IEC\n
+        - Enabling Environment for Private sector participation\n
+        - Capacity Building\n
+    </string>
+
+    <!-- Drawer Header Items-->
+    <string name="mission_name">Swachcha Maharashtra Mission (Urban)</string>
+    <string name="mission_email">swachchamaha@maharashtra.gov.in ???</string>
+
+    <!-- Menu Items-->
+    <string name="nav_home">Home Page</string>
+    <string name="nav_gallary">Gallery</string>
+    <string name="nav_all_practices">Practices</string>
+</resources>
