@@ -29,8 +29,10 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ShareActionProvider;
 import android.widget.Switch;
 
+import com.intsoft.swachchamaha.bestpractices.BestPracticeListFragment;
 import com.intsoft.swachchamaha.fragment.HomePageStaticImageFragment;
 import com.intsoft.swachchamaha.fragment.LanguageChangeFragment;
+import com.intsoft.swachchamaha.fragment.SwipeRefreshListFragmentFragment;
 import com.intsoft.swachchamaha.util.Constants;
 
 import java.util.Locale;
@@ -169,10 +171,13 @@ public class HomeActivity extends AppCompatActivity
             // Handle the camera action
         } else*/ if (id == R.id.nav_all_practices) {
             // Show all practices here
-            fragmentTransaction
-                    .replace(R.id.content, allPracticesFragment)
-                    .commit();
+            // SwipeRefreshListFragmentFragment fragment = new SwipeRefreshListFragmentFragment();
+            // fragmentTransaction.replace(R.id.content, allPracticesFragment);
+            BestPracticeListFragment fragment = new BestPracticeListFragment();
+            fragmentTransaction.replace(R.id.content, fragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_gallery) {
+
             fragmentTransaction
                     .replace(R.id.content, galleryFragment)
                     .commit();
