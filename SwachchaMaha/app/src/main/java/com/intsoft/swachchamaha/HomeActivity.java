@@ -47,6 +47,7 @@ public class HomeActivity extends AppCompatActivity
     private Fragment homePageStaticImageFragment = new HomePageStaticImageFragment();
     // private ShareActionProvider shareActionProvider;
     private Fragment languageChangeFragment = new LanguageChangeFragment();
+    private Fragment contactFragment=new ContactFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,10 +128,14 @@ public class HomeActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.enter_from_right, R.animator.exit_to_left);
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+                fragmentTransaction
+                        .replace(R.id.content, languageChangeFragment)
+                        .commit();
+
         } else if(id == R.id.action_share) {
             shareit();
         }
@@ -192,7 +197,11 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             shareit();
         } else if (id == R.id.nav_send) {
+            fragmentTransaction
+                    .replace(R.id.content,contactFragment)
+                    .commit();
 
         }
+
     }
 }
