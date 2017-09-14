@@ -94,7 +94,7 @@ public class BestPracticeListFragment extends SwipeRefreshListFragment {
         BestPracticesAdapter bestPracticesAdapter = null;
         if(listAdapter == null) {
             // TODO what can be input here?
-            bestPracticesAdapter = new BestPracticesAdapter();
+            bestPracticesAdapter = new BestPracticesAdapter(getActivity(), R.layout.best_practice_item, bestPractices);
             setListAdapter(bestPracticesAdapter);
         } else {
             bestPracticesAdapter = (BestPracticesAdapter) listAdapter;
@@ -108,7 +108,7 @@ public class BestPracticeListFragment extends SwipeRefreshListFragment {
 
     class FetchBestPracticesTask extends AsyncTask<Void, Void, List<BestPractice>> {
 
-        static final int TASK_DURATION = 6 * 1000; // 3 seconds
+        static final int TASK_DURATION = 3 * 1000; // 3 seconds
 
         @Override
         protected void onPreExecute() {
@@ -125,8 +125,29 @@ public class BestPracticeListFragment extends SwipeRefreshListFragment {
 
             List<BestPractice> bestPractices = new ArrayList<>();
             BestPractice bestPractice = new BestPractice();
-            bestPractice.setTitle(UUID.randomUUID().toString());
-            bestPractice.setDescription(UUID.randomUUID().toString());
+            bestPractice.setTitle("Eliminating Open Defecation");
+            bestPractice.setDescription("To create an enabling environment for private sector participation in Capex (capital expenditure) and Opex (operation and maintenance)");
+            bestPractice.setMonth("June");
+            bestPractice.setYear("2016");
+            bestPractice.setPlace("Mahad");
+            bestPractices.add(bestPractice);
+
+
+            bestPractice = new BestPractice();
+            bestPractice.setTitle("Eradication of Manual Scavenging");
+            bestPractice.setDescription("To create an enabling environment for private sector participation in Capex (capital expenditure) and Opex (operation and maintenance)");
+            bestPractice.setMonth("Oct");
+            bestPractice.setYear("2016");
+            bestPractice.setPlace("Vengurla");
+            bestPractices.add(bestPractice);
+
+
+            bestPractice = new BestPractice();
+            bestPractice.setTitle("Modern Scientific Approach");
+            bestPractice.setDescription("To create an enabling environment for private sector participation in Capex (capital expenditure) and Opex (operation and maintenance)");
+            bestPractice.setMonth("May");
+            bestPractice.setYear("2017");
+            bestPractice.setPlace("Vardha");
             bestPractices.add(bestPractice);
             return bestPractices;
         }
