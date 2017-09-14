@@ -55,4 +55,14 @@
     <string name="share_via">Share via</string>
     <string name="share_message_body">Download this App via - https://swachh.maharashtra.gov.in/1035/Home</string>
     <string name="share_subject">Swachch Manaharashtra App</string>
+
+
+    <!-- Remove this after trial -->
+
+    <string name="menu_refresh">Refresh</string>
+
+    <string name="menu_color_scheme">Color scheme</string>
+    <string name="menu_color_scheme_1">Scheme #1</string>
+    <string name="menu_color_scheme_2">Scheme #2</string>
+    <string name="menu_color_scheme_3">Scheme #3</string>
 </resources>
