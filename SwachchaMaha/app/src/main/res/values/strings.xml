@@ -56,6 +56,24 @@
     <string name="share_message_body">Download this App via - https://swachh.maharashtra.gov.in/1035/Home</string>
     <string name="share_subject">Swachch Manaharashtra App</string>
 
+    <!--Contact Details-->
+    <string name="text_contact">Shri. Uday Tekade</string>
+    <string name="text_contactdetails">Mission Director\n
+        Swachh Maharashtra Mission (Urban), Mumbai\n
+        Government of Maharashtra.\n
+    </string>
+    <string name="text_contactaddr">Address</string>
+    <string name="text_contactaddrdetail">C/O Munfra, Ground Floor, CR2, Ba. Rajni Patel Road, Nariman Point, Mumbai 400021\n</string>
+    <string name="text_contactnum">Contact details</string>
+    <string name="text_contactnumber">Fax: 022 66157390</string>
+
+    <!--Customer Feedback Details-->
+    <string name="text_customer">Customer Feedback</string>
+    <string name="text_customer_name">Name</string>
+    <string name="text_customer_district">District</string>
+    <string name="text_customer_mobile">Mobile Number</string>
+    <string name="text_customer_feedback">Your Feedback(140 character)</string>
+    <string name="text_customer_submit">Submit</string>
 
     <!-- Remove this after trial -->
 
