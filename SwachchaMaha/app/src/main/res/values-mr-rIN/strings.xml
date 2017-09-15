@@ -46,4 +46,24 @@
     <string name="nav_share">सामाजिक जोडणी</string>
     <string name="nav_contact_us">आमचा संपर्क</string>
 
+    <!--Contact Details-->
+    <string name="text_contact">श्री.उदय टेकडे</string>
+    <string name="text_contactdetails">
+        मिशन संचालक\n
+        स्वच्छ महाराष्ट्र अभियान (नगर विकास विभाग),\n
+        महाराष्ट्र शासन.\n
+    </string>
+    <string name="text_contactaddr">पत्ता</string>
+    <string name="text_contactaddrdetail">सी/ओ मुन्फ्रा, तळमजला, सीआर-२, बॅरीस्टर रजनी पटेल मार्ग, नरिमन पॉईंट, मुंबई ४०००२१\n</string>
+    <string name="text_contactnum">संपर्क माहिती</string>
+    <string name="text_contactnumber">फॅक्स: 022 66157390</string>
+
+    <!--Customer Feedback Details-->
+    <string name="text_customer">ग्राहक अभिप्राय </string>
+    <string name="text_customer_name">नाव </string>
+    <string name="text_customer_district">जिल्हा </string>
+    <string name="text_customer_mobile">मोबाइल नंबर </string>
+    <string name="text_customer_feedback">आपला अभिप्राय (140 वर्ण) </string>
+    <string name="text_customer_submit">सबमिट करा </string>
+
 </resources>
